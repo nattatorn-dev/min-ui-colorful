@@ -1,4 +1,4 @@
-# Mini-colorful UI theme
+# min-ui-colorful theme
 
 A minimal UI and colorful theme for Atom. earning more space and impacts your emotions and behaviors
 
