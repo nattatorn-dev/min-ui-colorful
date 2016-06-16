@@ -1,0 +1,136 @@
+.tree-view {
+    font-size: 12px;
+    .list-item {
+        line-height: 21px !important;
+        @sitem: 80%;
+        @litem: 45%;
+        background: linear-gradient(-45deg, hsl(160, @sitem, @litem), hsl(270, @sitem, @litem));
+        -webkit-background-clip: text;
+    }
+    .selected:before,
+    .selected:before {
+        height: 18px !important;
+    }
+    .header:before {
+        font-size: 10px !important;
+        opacity: 0.6;
+        margin-right: 0 !important;
+    }
+}
+.tree-view .selected:before {
+    background: #282828;
+    content: '';
+    background: rgba(117, 98, 186, 0.45);
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+.tab-bar {
+    height: 35px;
+}
+.tab-bar .tab.active {
+    color: #0D99FC;
+    letter-spacing: 0.7px;
+    font-size: 14px;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+.tab-bar .tab.active .close-icon {
+    line-height: 43px;
+    color: #f92672;
+    text-shadow: 1px 1px 0 #040201, -1px -1px 0 #6F2F2F, 1px -1px 0 #1F0606, -1px 1px 0 #1D0303, 1px 1px 0 #230606;
+}
+.editor {
+    .invisible-character {
+        color: #504949;
+        opacity: 0.5;
+    }
+    .indent-guide {
+        opacity: 0.5;
+    }
+}
+.editor .cursor {
+    border-left-width: 2px;
+}
+.editor.is-focused .line-number.cursor-line-no-selection,
+.editor.is-focused .line.cursor-line {
+    background-color: rgba(53, 57, 60, 0);
+}
+.editor.is-focused .selection .region {
+    background-color: rgba(100, 110, 100, 0.6);
+    color: #fff !important;
+    text-shadow: none;
+}
+.status-bar-right {
+    .git-view {
+        display: inline-block;
+        padding: 0 9px;
+        background-color: currentColor;
+        border-radius: 50px 25px;
+        .git-branch {
+            color: aliceblue;
+        }
+    }
+    a[data-grammar] {
+        @sgrammar: 85%;
+        @lgrammar: 75%;
+        background: linear-gradient(-45deg, hsl(60, @sgrammar, @lgrammar), hsl(175, @sgrammar, @lgrammar));
+        font-weight: bold;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+html /deep/ .source .string {
+    @s: 85%;
+    @l: 75%;
+    background: linear-gradient(-45deg, hsl(60, @s, @l), hsl(360, @s, @l));
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#atom-perspective() {
+    @viewing-distance: 12in;
+    @rotation: 16deg;
+    .tree-view-scroller {
+        transform: translateY(-10vh) perspective(@viewing-distance) rotateY(@rotation);
+        padding-top: 12vh;
+        transform-origin: left;
+        width: 120%;
+        height: 120%;
+    }
+}
+#atom-perspective;
+atom-text-editor::shadow {
+    .highlights .bracket-matcher .region {
+        @s: 85%;
+        @l: 75%;
+        background: linear-gradient(-45deg, hsl(179, 100%, 85%), hsl(175, 59%, 46%));
+        font-weight: bold;
+        transition: background-color 400ms;
+    }
+    .cursors.blink-off ~ .highlights .bracket-matcher .region {
+        background-color: yellow;
+    }
+}
+.overlay,
+atom-panel.modal {
+    color: rgba(248, 248, 242, 0.6);
+    padding: 0;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.1);
+}
+.tool-panel,
+atom-panel {
+    position: relative;
+    background: rgb(32, 32, 32);
+}
+status-bar .flexbox-repaint-hack {
+    padding: 0 12.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: x-small;
+}
