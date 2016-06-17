@@ -4,8 +4,12 @@
         line-height: 21px !important;
         @sitem: 80%;
         @litem: 45%;
+      //  color: rgba(248, 248, 242, 0.2);
         background: linear-gradient(-45deg, hsl(160, @sitem, @litem), hsl(270, @sitem, @litem));
         -webkit-background-clip: text;
+        .name.icon.icon-file-directory {
+        //color: rgba(117, 98, 186, 0.45);
+        }
     }
     .selected:before,
     .selected:before {
@@ -24,6 +28,29 @@
     display: block;
     -webkit-transition: all 1s ease-in-out;
 }
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+  background: linear-gradient(-80deg, #e6db74, #FEDB32);
+  color: rgba(248, 248, 242, 0.2);
+  -webkit-background-clip: text;
+  .name.icon.icon-file-directory {
+    color: #e6db74;
+  }
+}
+
+.list-group li:not(.list-nested-item).status-ignored, .list-tree li:not(.list-nested-item).status-ignored, .list-group li.list-nested-item.status-ignored > .list-item, .list-tree li.list-nested-item.status-ignored > .list-item {
+  background: linear-gradient(-80deg, gray, black);
+  -webkit-background-clip: text;
+}
+
+.list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
+  background: linear-gradient(-80deg, #529b2f, #2bda77);
+  color: rgba(248, 248, 242, 0.2);
+  -webkit-background-clip: text;
+  .name.icon.icon-file-directory {
+    color: #529b2f;
+  }
+}
+
 .tab-bar {
     height: 35px;
 }
@@ -137,3 +164,9 @@ status-bar .flexbox-repaint-hack {
     justify-content: space-between;
     font-size: x-small;
 }
+
+// .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+//   .status-added {
+//     color: #2bda77;
+//   }
+// }
