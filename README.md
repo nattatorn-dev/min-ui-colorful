@@ -9,7 +9,7 @@ new update v0.9.0
 - ES 6, 7 real arrow
 
 Screen Shots
-![overview](https://postimg.org/image/y7xwrnfw3/][img]https://s21.postimg.org/y7xwrnfw3/Screen_Shot_2017_03_23_07_39_40_PM.png)
-![search](https://postimg.org/image/cmsu41j5f/][img]https://s21.postimg.org/cmsu41j5f/Screen_Shot_2017_03_23_07_43_34_PM.png)
+![overview](https://s21.postimg.org/mvlb9v77b/Screen_Shot_2017_03_23_07_39_40_PM.png)
+![search](https://s21.postimg.org/xwggevzg7/Screen_Shot_2017_03_23_07_43_34_PM.png)
 
 using [min-ui](https://atom.io/packages/min-ui)
