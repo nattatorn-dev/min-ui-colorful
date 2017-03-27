@@ -4,7 +4,7 @@ A minimal UI and colorful theme for Atom. earning more space and impacts your em
 
 at first install [monokai theme](https://atom.io/themes/monokai)
 
-new update v0.9.0
+new update v0.20.0
 - git status gradient color
 - ES 6, 7 real arrow
 
